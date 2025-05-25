@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileAnalysisService.Web", "FileAnalysisService.Web\FileAnalysisService.Web.csproj", "{A49E3A35-77FC-4BB1-9E30-8E12243F5D4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileAnalysisService.Core", "FileAnalysisService.Core\FileAnalysisService.Core.csproj", "{1DD8BFA4-AC83-4CED-8A1C-D81F43C5FBFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileAnalysisService.UseCases", "FileAnalysisService.UseCases\FileAnalysisService.UseCases.csproj", "{186A0D4E-DD0E-4DCB-A019-A62E5342EDB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileAnalysisService.Infrastructure", "FileAnalysisService.Infrastructure\FileAnalysisService.Infrastructure.csproj", "{DACCA1A8-0EB7-498E-8F6F-1072A3DE0D23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A49E3A35-77FC-4BB1-9E30-8E12243F5D4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A49E3A35-77FC-4BB1-9E30-8E12243F5D4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A49E3A35-77FC-4BB1-9E30-8E12243F5D4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A49E3A35-77FC-4BB1-9E30-8E12243F5D4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DD8BFA4-AC83-4CED-8A1C-D81F43C5FBFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DD8BFA4-AC83-4CED-8A1C-D81F43C5FBFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DD8BFA4-AC83-4CED-8A1C-D81F43C5FBFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DD8BFA4-AC83-4CED-8A1C-D81F43C5FBFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{186A0D4E-DD0E-4DCB-A019-A62E5342EDB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{186A0D4E-DD0E-4DCB-A019-A62E5342EDB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{186A0D4E-DD0E-4DCB-A019-A62E5342EDB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{186A0D4E-DD0E-4DCB-A019-A62E5342EDB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DACCA1A8-0EB7-498E-8F6F-1072A3DE0D23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DACCA1A8-0EB7-498E-8F6F-1072A3DE0D23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DACCA1A8-0EB7-498E-8F6F-1072A3DE0D23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DACCA1A8-0EB7-498E-8F6F-1072A3DE0D23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

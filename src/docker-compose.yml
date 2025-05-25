@@ -1,0 +1,74 @@
+version: "3.8"
+
+services:
+  file_storing_service_postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: file_storing_service
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - file_storing_db_data:/var/lib/postgresql/data
+    
+
+  file_storing_service: 
+    build:
+      context: ./FileStoringService
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      Storage__BasePath: Files
+      Storage__ConnectionString: "Host=file_storing_service_postgres;Database=file_storing_service;Username=postgres;Password=postgres"
+    depends_on:
+      - file_storing_service_postgres
+    ports:
+      - "7167:80"
+    
+
+    
+
+
+  file_analysis_service_postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: file_analysis_service
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - file_analysis_db_data:/var/lib/postgresql/data
+    
+
+  file_analysis_service:
+    build:
+      context: ./FileAnalysisService
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      FileStoringService__BaseUrl: http://file_storing_service
+      Storage__ConnectionString: "Host=file_analysis_service_postgres;Database=file_analysis_service;Username=postgres;Password=postgres"
+    depends_on:
+      - file_storing_service
+    ports:
+      - "7214:80"
+    
+
+  api_gateway:
+    build:
+      context: ./Api Gateway
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      Services__FileStoringService__BaseUrl: https://file_storing_service:80
+      Services__FileAnalysisService__BaseUrl: https://file_analysis_service:80
+    depends_on:
+      - file_storing_service
+      - file_analysis_service
+    ports:
+      - "7028:80"
+    
+
+volumes:
+  file_storing_db_data:
+  file_analysis_db_data:
+  filestorage_files:
+
