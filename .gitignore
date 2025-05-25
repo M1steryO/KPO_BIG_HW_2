@@ -769,4 +769,4 @@ coverage*[.json, .xml, .info]
 out
 gen
 
-.DS_Store
+**/.DS_Store
